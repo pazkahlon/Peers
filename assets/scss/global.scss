@@ -1,0 +1,19 @@
+@import 'fonts.scss';
+
+// Define your variable overrides here
+@import 'variables.scss';
+
+// Include Bootstrap and BootstrapVue SCSS files
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+// Animations
+@import 'animations.scss';
+
+// components
+@import 'components/button.scss';
+
+.note {
+  font-size: 14px;
+  display: block;
+}

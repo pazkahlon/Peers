@@ -1,0 +1,61 @@
+.zoomIn,
+.slideInUp,
+.slideOutDown {
+  animation-duration: 1s;
+}
+
+// Zoom-In
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+// Slide-In Up
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+// Slide-Out Down
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
+}
+
+@media (print), (prefers-reduced-motion: reduce) {
+  .zoomIn,
+  .slideInUp,
+  .slideOutDown {
+    animation-duration: 0 !important;
+  }
+}
